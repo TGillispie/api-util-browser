@@ -1,11 +1,12 @@
 API Util: This program is a utility for testing APIs in **Browser** JavaScript.  See the example in index.mjs for pragmatic use, or run the provided test cases.  Tests for the provided APIs are included in the ./test folder.  Use `npm test` to run them.
 
 Add new APIs to the src/service folder.
+
 Write new Tests in the test folder.
 
-(*Compare this project against the NodeJS version to see how similar JavaScript is in NodeJS programs vs. Browser programs. [api-util-nodejs](http://github.com/tyler.gillispie/api-util-nodejs) *)
+(*Compare this project against the NodeJS version to see how similar JavaScript is in NodeJS programs vs. Browser programs. [api-util-nodejs](https://github.com/TGillispie/api-util-nodejs) *)
 
-The following table lists all currently configred API endpoints.
+The following table lists all currently configured API endpoints.
 API | Description | Function
 :---: | --- | ---
 *OARS*
@@ -55,13 +56,13 @@ npm run dev
 Clone this project from github.
 
 ### Install Dependencies
-Run this command from the project root folder to install all dependancies listed in package.json.
+Run this command from the project root folder to install all dependencies listed in package.json.
 ```bash
 npm install
 ```
 
 ### Setup Config
-Update any keys or credentials neccessary for the project.
+Update any keys or credentials necessary for the project.
 ```bash
 # Add any required keys or credentials to the config.
 # edit the src/state/global.mjs
@@ -90,7 +91,7 @@ python3 -m http.server -b localhost 3006
 #### PHP Dev Server
 This example is provided for reference only.  Currently PHP does NOT support .mjs file extensions.  As of PHP 7.4.23 the PHP dev server will not work for ES6 modules.  It does not recognize or serve the correct mime/type.
 ```bash
-# php -S localhost:3006 
+# php -S localhost:3006
 ```
 
 ## Program
@@ -100,10 +101,10 @@ Most files are stored in the src folder.  The application entry point is index.h
 
 File | Description
 :---: | ---
- *-* | **Application** 
+ *-* | **Application**
 *index.html* | Main entry point hosted by a web server program.
-*index.mjs* | Main module that loads and runs the program.  Modify this code to try differnt actions within the program.
-*src/app.mjs* | The actual program; app.mjs configures and loads libraries and  dependancies and provides an interface for user actions.
+*index.mjs* | Main module that loads and runs the program.  Modify this code to try different actions within the program.
+*src/app.mjs* | The actual program; app.mjs configures and loads libraries and  dependencies and provides an interface for user actions.
  *-* | **State Management and Services**
 *service/oars.mjs* | An implementation of the OARS API.
 *state/global.mjs* | A global object for storing program data.
