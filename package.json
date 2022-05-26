@@ -9,8 +9,14 @@
   },
   "devDependencies": {
     "jasmine-browser-runner": "^1.0.0",
-    "jasmine-core": "^4.1.0",
-    "live-server": "^1.2.1"
+    "jasmine-core": "^4.1.1",
+    "live-server": "^1.2.2"
+  },
+  "devDependenciesNotes": {
+    "jasmine-core": [
+			"5/26/2022: requires nodeJS < 18.0 due to selenium bug/patch",
+  		"https://github.com/SeleniumHQ/selenium/issues/10619"
+		]
   },
   "scripts": {
     "test": "jasmine-browser-runner runSpecs --config=test/support/jasmine-browser.json --color --browser=headlessChrome",

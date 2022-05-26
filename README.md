@@ -42,6 +42,7 @@ API | Description | Function
 # Clone the project first then...
 cd project
 npm install
+# pnpm is recommended for a better package management experience.
 
 # Add any required keys or credentials to the config.
 # edit the src/state/global.mjs
