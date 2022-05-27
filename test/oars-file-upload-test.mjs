@@ -1,4 +1,7 @@
 import { app, appService } from './test-app.mjs'
+import wavZipBase64 from './assets/wav-zip-base64.mjs'
+import wavGzBase64 from './assets/wav-gz-base64.mjs'
+import wavWavBase64 from './assets/wav-wav-base64.mjs'
 
 describe("oars file upload", () => {
   // Return a file.
@@ -58,4 +61,38 @@ describe("oars file upload", () => {
 
 		expect(x).toEqual(fileSuccessResponse)
 	})
+
+  it("upload a .zip file", async () => {
+    const filename = 'wav.zip'
+    const contentType = 'application/zip'
+    const file64 = wavZipBase64
+    const file = atob(file64) // Convert base64 encoded file to binary.
+
+    const x = await getFile(filename, file, contentType)
+
+		expect(x).toEqual(fileSuccessResponse)
+  })
+
+  it("upload a .gz file", async () => {
+    const filename = 'wav.gz'
+    const contentType = 'application/gzip'
+    const file64 = wavGzBase64
+    const file = atob(file64) // Convert base64 encoded file to binary.
+
+    const x = await getFile(filename, file, contentType)
+
+		expect(x).toEqual(fileSuccessResponse)
+  })
+
+  it("upload a .wav file", async () => {
+    const filename = 'wav.wav'
+    const contentType = 'application/wav'
+    const file64 = wavWavBase64
+    const file = atob(file64) // Convert base64 encoded file to binary.
+
+    const x = await getFile(filename, file, contentType)
+
+		expect(x).toEqual(fileSuccessResponse)
+  })
+
 })
