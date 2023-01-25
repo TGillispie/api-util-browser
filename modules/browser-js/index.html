@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Test Utility</title>
+  </head>
+
+	<body>
+    <div id="app"></div>
+
+    <!-- Loads the app and all components. -->
+    <script type="module" src="/src/main.js"></script>
+
+		<!-- Import some stuff into the global context so
+			folks can poke around easier. -->
+    <script>
+      let app = null;
+      let respUtil = null;
+      async function init() {
+        app = (await import('./src/app.mjs')).app
+        respUtil = (await import('./src/app-lib.mjs')).respUtil
+
+        console.log("Modules loaded: app, respUtil")
+      }
+    </script>
+
+  </body>
+</html>
