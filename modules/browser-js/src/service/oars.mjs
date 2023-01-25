@@ -43,7 +43,7 @@ const decorateRequestBody = async function(formData) {
     key: await key.text(),
     apiEnv: `${data.oarsEnvApi}`,
     dbEnv: `${data.oarsEnvDb}`,
-    project: `${data.oarsProjectName}`, // "DEMO",
+    project: `${data.oarsProjectName}`,
   }
   Object.keys(common).forEach(id =>
     formData.append(id, common[id]))
